@@ -1,0 +1,293 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: white;
+}
+
+.principal {
+    margin: -20px -20px 20px -20px; /* margen negativo para compensar el padding del body */
+}
+
+.principal img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    aspect-ratio: 16 / 9; /* relación de aspecto 16:9 */
+}
+
+nav {
+  background-color: #2c3e50; /* Fondo oscuro para la barra de navegación */
+  margin: -20px -20px 20px -20px; /* margen negativo para compensar el padding del body */
+}
+
+nav ul {
+  list-style: none; /* Elimina los puntos de la lista */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Coloca los elementos de la lista en una fila */
+  justify-content: center; /* Centra el contenido de la barra de navegación */
+}
+
+nav li {
+  margin: 0; /* Elimina el margen entre los elementos li */
+}
+
+nav a {
+  display: block; /* Hace que toda el área del enlace sea clickeable */
+  padding: 15px 20px; /* Espaciado interno para mejorar la legibilidad */
+  color: white; /* Texto blanco para contraste con el fondo oscuro */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+ transition: box-shadow 0.3s ease; /* animación suave al pasar el cursor */
+}
+
+nav a:hover {
+  background-color: #34495e; /* Color de fondo cuando el cursor está sobre el enlace */
+}
+
+h3{
+    font-size: clamp(20px, 2.5vw, 28px);
+    color: #333;
+    text-align: center;
+}
+
+.columnas {
+    display: grid;
+    justify-content: center; /* centra el grid horizontalmente */
+    margin: 20px; /* margen alrededor del grid */
+    grid-template-columns: repeat(6, 1fr); /* 12 columnas iguales */
+    gap: 10px; /* espacio entre columnas*/
+}
+
+.columna {
+    grid-column: span 2; /* cada columna ocupa 2 espacios de los 12 */
+    background-color: #d9d9d9;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #aaa;
+    box-shadow: 0 2px 4px rgba(4, 4, 4, 0.1) /* sombra sutil para dar profundidad */;
+    border-radius: 5% /* bordes redondeados */;
+}
+
+.columna :hover {
+    box-shadow: 0 8px 16px #333; /* sombra más pronunciada al pasar el cursor */
+}
+
+.columna img {
+    width: 100%; /* imagen ocupa todo el ancho de la columna */
+    height: auto; /* mantiene la proporción de la imagen */
+    object-fit: cover; /* recorta la imagen si es necesario */
+    aspect-ratio: 4 / 3; /* relación de aspecto 4:3 */
+    border-radius: 20px;/* esquinas redondeadas para la imagen */
+}
+
+.flex-columnas {
+    display: flex; /* activa Flexbox */
+    justify-content: center; /* centra los elementos horizontalmente */
+    margin: 20px; /* espacio alrededor del contenedor */
+    gap: 10px; /* separación entre columnas */
+}
+
+.flex-columna {
+    flex: 1; /* todas las columnas crecen por igual */
+    min-width: 200px; /* ancho mínimo para que no se hagan demasiado angostas */
+    background-color: #d9d9d9; /* fondo gris claro */
+    padding: 10px; /* espacio interno */
+    text-align: center; /* centra el texto */
+    border: 1px solid #aaa; /* borde gris claro */
+    border-radius: 5%; /* esquinas redondeadas */
+    box-shadow: 0 2px 4px rgba(4, 4, 4, 0.1); /* sombra sutil */
+    transition: box-shadow 0.3s ease; /* animación suave al pasar el cursor */
+}
+
+.flex-columna:hover {
+    box-shadow: 0 8px 16px #333; /* efecto de sombra más profunda al hacer hover */
+}
+
+.flex-columna img {
+    width: 100%; /* la imagen se adapta al ancho del contenedor */
+    height: auto; /* mantiene proporciones */
+    object-fit: cover; /* recorta si es necesario */
+    aspect-ratio: 4 / 3; /* fija una proporción visual agradable */
+    border-radius: 20px; /* esquinas redondeadas para la imagen */
+}
+
+/* 🎨 Estilo para tarjetas de playas */
+.tarjeta-playa {
+  background-color: #f5fdf7; /* Verde muy claro, transmite frescura y naturaleza */
+  border: 1px solid #cde8d5; /* Borde en tono verde pálido para resaltar el contorno */
+  border-radius: 10px; /* Bordes moderadamente redondeados para suavidad */
+  box-shadow: 0 2px 6px rgba(80, 200, 120, 0.1); /* Sombra ligera en tono verdoso */
+  padding: 10px; /* Espaciado interno para separar contenido del borde */
+  text-align: center; /* Centra el texto y elementos dentro de la tarjeta */
+  transition: transform 0.3s; /* Suaviza el movimiento en hover */
+}
+
+.tarjeta-playa:hover {
+  transform: translateY(-5px); /* Eleva ligeramente la tarjeta al hacer hover */
+  box-shadow: 0 8px 16px rgba(80, 200, 120, 0.2); /* Sombra más intensa para resaltar efecto flotante */
+}
+
+.tarjeta-playa img {
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  height: auto; /* Mantiene proporciones originales */
+  object-fit: cover; /* Recorta la imagen si es necesario para rellenar sin deformarla */
+  aspect-ratio: 4 / 3; /* Relación clásica tipo fotografía */
+  border-radius: 6px; /* Bordes redondeados suaves en la imagen */
+}
+
+.tarjeta-hotel {
+  background-color: #2c2c2c; /* Fondo gris oscuro que da un tono sobrio y elegante */
+  border: 1px solid #444; /* Borde ligeramente más claro que el fondo para distinguir los bordes */
+  border-radius: 8px; /* Esquinas levemente redondeadas para suavizar la tarjeta */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Sombra que agrega profundidad y relieve */
+  padding: 12px; /* Espaciado interno para evitar que el contenido toque los bordes */
+  text-align: center; /* Centra el texto y las imágenes dentro de la tarjeta */
+  transition: transform 0.3s ease; /* Animación fluida al hacer hover */
+}
+
+.tarjeta-hotel:hover {
+  transform: scale(1.02); /* Aumenta levemente el tamaño para dar sensación de interacción */
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1); /* Sombra clara adicional que resalta la tarjeta */
+}
+
+.tarjeta-hotel img {
+  width: 100%; /* La imagen ocupa completamente el ancho disponible */
+  height: auto; /* Mantiene la proporción natural */
+  object-fit: cover; /* La imagen se recorta para llenar el espacio sin deformarse */
+  aspect-ratio: 4 / 3; /* Proporción clásica que armoniza visualmente con el resto del diseño */
+  border-radius: 5px; /* Bordes sutilmente redondeados para consistencia visual */
+}
+
+.bg-termales {
+  background: linear-gradient(135deg, #f9efe5 0%, #fff7f0 100%); /* Degradado en tonos crema-beige estilo spa */
+  border: 1px solid #eed8bb; /* Borde suave en tono tierra claro */
+}
+
+
+.tarjeta-termal {
+  background-color: #fffaf6; /* Fondo crema claro para suavidad visual */
+  border: 1px solid #decdbb; /* Borde tenue con tonos cálidos */
+  border-radius: 15px; /* Bordes redondeados que transmiten calma y fluidez */
+  box-shadow: 0 4px 12px rgba(170, 135, 100, 0.1); /* Sombra muy sutil para elevar la tarjeta ligeramente */
+  padding: 15px; /* Espaciado interno cómodo para el contenido */
+  transition: transform 0.3s ease; /* Animación fluida en hover */
+}
+
+
+.tarjeta-termal:hover {
+  transform: translateY(-5px); /* Eleva la tarjeta ligeramente hacia arriba */
+  box-shadow: 0 12px 24px rgba(170, 135, 100, 0.25); /* Sombra más profunda con tono cálido al hacer hover */
+}
+
+.tarjeta-termal h5 {
+  margin-bottom: 15px; /* Espacio inferior para separar el título del contenido */
+  font-weight: 600; /* Peso de fuente más fuerte para destacar el nombre del lugar */
+}
+
+.tarjeta-termal img {
+  object-fit: cover; /* Recorta la imagen para ajustarla al contenedor sin deformarla */
+  aspect-ratio: 4 / 3; /* Mantiene una proporción visual armónica */
+  /* Recomendación: podés agregar width: 100% y border-radius si querés que se vea igual que otras secciones */
+}
+
+/* Botón flotante */
+.floating-button {
+    position: fixed; /* Se mantiene fijo en la pantalla aunque se haga scroll */
+    bottom: 20px; /* Separación desde abajo */
+    right: 20px; /* Separación desde la derecha */
+    background-color: #007bff; /* Color de fondo azul (Bootstrap primary) */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 50%; /* Borde circular */
+    cursor: pointer; /* Cursor de mano al pasar por encima */
+    font-size: 20px; /* Tamaño del ícono o texto */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Sombra alrededor del botón */
+}
+
+/* Formulario desplegable */
+.form-popup {
+    position: fixed; /* Fijo en la pantalla */
+    bottom: 80px; /* Más arriba que el botón flotante */
+    right: 20px; /* Alineado al mismo borde derecho */
+    width: 300px; /* Ancho del formulario */
+    background: white; /* Fondo blanco */
+    padding: 15px; /* Espaciado interno */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    border-radius: 10px; /* Bordes redondeados */
+    display: none; /* Oculto por defecto (se muestra al hacer clic) */
+}
+
+/* Estilos del contenido del formulario */
+.form-content input {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 8px; /* Espaciado interno */
+    margin: 5px 0; /* Espaciado vertical entre inputs */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Botón de envío del formulario */
+.submit-btn {
+    width: 100%; /* Ocupa todo el ancho del formulario */
+    padding: 10px; /* Espaciado interno */
+    background-color: #007bff; /* Azul Bootstrap */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin-top: 10px; /* Separación superior respecto a los inputs */
+}
+
+
+/* Estilo específico para el texto dentro del modal (si se usa uno) */
+#myModal {
+    color: black; /* Color del texto en negro */
+}
+
+.custom-btn {
+  padding-top: 15px;
+  background-color: transparent; /* sin color de fondo */
+  color: white; /* color del texto */
+}
+
+@media screen and (max-width: 1600px) {
+  .columna {
+    grid-column: span ; /* cada columna ocupa 4 espacios de los 12 */
+  }   
+}
+
+@media screen and (max-width: 1200px) {
+  .columnas {
+    grid-template-columns: repeat(6, 1fr); /* 6 columnas en pantallas más pequeñas */
+  }
+  .columna {
+    grid-column: span 3; /* cada columna ocupa 3 espacios de los 6 */
+  }
+    
+}
+
+@media (max-width: 768px) {
+  
+  .columnas {
+    grid-template-columns: repeat(1, 1fr); /* Una sola columna de ancho completo */
+  }
+
+  .columna {
+    grid-column: span 1; /* Se asegura de que no intente ocupar más de 1 columna */
+  }
+
+}
+
+/* Media queries adaptados */
+
+/* ✔ 1 columna (pantallas pequeñas) */
+@media screen and (max-width: 1200px) {
+  .flex-columnas {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+
+  }
+}
