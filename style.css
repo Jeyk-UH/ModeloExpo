@@ -226,13 +226,13 @@ h3{
 
 /* Diseño responsivo */
 @media (max-width: 992px) {
-  .tarjeta-auto {
+  .tarjeta-animales {
     width: 45%; /* Dos tarjetas por fila en pantallas medianas */
   }
 }
 
 @media (max-width: 600px) {
-  .tarjeta-auto {
+  .tarjeta-animales {
     width: 100%; /* Una sola tarjeta por fila en móviles */
     margin: 10px 0;
   }
