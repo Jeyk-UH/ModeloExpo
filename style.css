@@ -191,6 +191,53 @@ h3{
   /* Recomendación: podés agregar width: 100% y border-radius si querés que se vea igual que otras secciones */
 }
 
+/* Tarjetas generales con float */
+/* 🐾 Tarjetas generales para mostrar animales con diseño de columnas flotantes */
+.tarjeta-animales {
+  float: left;              /* Coloca las tarjetas una al lado de otra flotando hacia la izquierda */
+  width: 30%;               /* Cada tarjeta ocupa aproximadamente un tercio del ancho del contenedor */
+  margin: 1.66%;            /* Espacio uniforme entre las tarjetas para distribuirlas bien */
+  background-color: #f9f9f9; /* Fondo gris muy claro para un look limpio */
+  border: 1px solid #ccc;   /* Borde sutil en gris claro */
+  border-radius: 12px;      /* Esquinas redondeadas que suavizan el diseño */
+  text-align: center;       /* Centra el contenido como imágenes y texto */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra discreta para dar profundidad */
+  padding: 10px;            /* Espaciado interior para que el contenido no toque los bordes */
+  transition: transform 0.3s; /* Suaviza el movimiento al hacer hover */
+}
+
+.tarjeta-animales:hover {
+  transform: translateY(-5px); /* Mueve la tarjeta hacia arriba para un efecto visual al pasar el cursor */
+}
+
+.tarjeta-animales img {
+  width: 100%;            /* La imagen se adapta al ancho total de su contenedor */
+  height: auto;           /* Mantiene la proporción natural de la imagen */
+  object-fit: cover;      /* Recorta la imagen para que encaje sin distorsión */
+  aspect-ratio: 4 / 3;    /* Relación visual estándar de fotografía */
+  border-radius: 8px;     /* Bordes redondeados solo para la imagen */
+}
+
+.clearfix::after {
+  content: "";            /* Inserta un elemento vacío después del contenedor */
+  display: table;         /* Lo convierte en un bloque de tipo tabla */
+  clear: both;            /* Limpia los floats anteriores para evitar colapsos de altura */
+}
+
+/* Diseño responsivo */
+@media (max-width: 992px) {
+  .tarjeta-auto {
+    width: 45%; /* Dos tarjetas por fila en pantallas medianas */
+  }
+}
+
+@media (max-width: 600px) {
+  .tarjeta-auto {
+    width: 100%; /* Una sola tarjeta por fila en móviles */
+    margin: 10px 0;
+  }
+}
+
 /* Botón flotante */
 .floating-button {
     position: fixed; /* Se mantiene fijo en la pantalla aunque se haga scroll */
